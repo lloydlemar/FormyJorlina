@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heart Button Page</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #7b49d3, #b18cd4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      font-size: 4rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #f8bbd0;
+      text-shadow: 0 0 10px #f48fb1;
+      user-select: none;
+      animation: heartbeat 1.5s infinite;
+      transition: color 0.3s ease;
+    }
+
+    button:hover {
+      color: #ff80ab;
+      text-shadow: 0 0 20px #ff4081;
+      animation-duration: 1s;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #f48fb1);
+      }
+      25% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px #ff4081);
+      }
+      50% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 20px #ff80ab);
+      }
+      75% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px #ff4081);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button id="heartBtn" aria-label="Go to surprise page">❤️</button>
+
+  <script>
+    document.getElementById('heartBtn').addEventListener('click', () => {
+      window.location.href = 'surprise.html';
+    });
+  </script>
+
+</body>
+</html>
